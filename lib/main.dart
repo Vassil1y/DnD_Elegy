@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-
 void main() {
+  //flutter build web --web-renderer html --release
   runApp(const MyApp());
 }
 
@@ -29,17 +29,26 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      
       // height: 100,
       // width: 100,
       decoration: const BoxDecoration(
-        color: Colors.black,
+        color: Colors.pink,
         image: DecorationImage(
-          image: AssetImage('_authbackground.png'),
+          image: NetworkImage(
+              'https://catherineasquithgallery.com/uploads/posts/2021-03/1614633626_77-p-kiberpank-fon-dlya-fotoshopa-99.png'),
           fit: BoxFit.cover,
         ),
       ),
-      child: Container(),
+      child: const Center(
+        child: Text(
+          "Coming soon...",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+              fontFamily: 'New_Zelek',
+              color: Colors.white,
+              fontWeight: FontWeight.bold),
+        ),
+      ),
     );
   }
 }
