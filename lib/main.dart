@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'auth_page/widgets/avatar_widget.dart';
-import 'auth_page/auth_page_main.dart';
 
 void main() {
   runApp(const MyApp());
