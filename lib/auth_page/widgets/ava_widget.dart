@@ -42,7 +42,7 @@ class _AvaWidgetState extends State<AvaWidget> {
                     offset: Offset(0.0, 1))
               ],
             ),
-            child: Image.asset(widget.ava_image_path),
+            child: Image.network(widget.ava_image_path),
           ),
         ),
       ),

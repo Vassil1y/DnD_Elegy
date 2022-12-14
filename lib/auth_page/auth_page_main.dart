@@ -4,10 +4,11 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/widgets.dart';
 
 import 'widgets/ava_widget.dart';
+import 'package:dnd_elegy/static_strings.dart';
 
 class AuthPageMain extends StatelessWidget {
-  const AuthPageMain({super.key});
-  final String dasha_path = "ava_dasha.jpg";
+  AuthPageMain({super.key});
+  final String dasha_path = ava_dasha_link;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class AuthPageMain extends StatelessWidget {
       decoration: const BoxDecoration(
         color: Colors.black,
         image: DecorationImage(
-          image: AssetImage("_authbackground.png"),
+          image: NetworkImage("https://raw.githubusercontent.com/Vassil1y/DnD_Elegy/962491145465c1e96d3d902174b803005aac9095/assets/_authbackground.png"),
           fit: BoxFit.cover,
         ),
       ),

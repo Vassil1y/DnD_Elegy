@@ -25,7 +25,7 @@ class ValuesUniversalWidget extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.all(2.0),
-              child: Image.asset(
+              child: Image.network(
                 icon,
                 height: 15,
                 width: 20,

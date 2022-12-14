@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:expandable_page_view/expandable_page_view.dart';
+import 'package:dnd_elegy/static_strings.dart';
 
 class CorePage extends StatefulWidget {
   const CorePage({super.key});
@@ -20,10 +21,10 @@ class _CorePageState extends State<CorePage> {
   );
   String selectedPage = "0";
   List<String> iconsPaths = [
-    "coins.png",
-    "health.png",
-    "energy.png",
-    "weight.png"
+   coins_link,
+   energy_link,
+   health_link,
+   weight_link
   ];
 
   int _currentIndex = 0;
@@ -31,8 +32,8 @@ class _CorePageState extends State<CorePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        flexibleSpace: const Image(
-          image: AssetImage('appbar_background.png'),
+        flexibleSpace: Image(
+          image: NetworkImage(appbar_background_link),
           fit: BoxFit.cover,
         ),
         automaticallyImplyLeading: false,
@@ -69,10 +70,10 @@ class _CorePageState extends State<CorePage> {
                 Container(
                   width: MediaQuery.of(context).size.width,
                   // height: MediaQuery.of(context).size.height-100,
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     color: Colors.black,
                     image: DecorationImage(
-                      image: AssetImage("_authBackground.png"),
+                      image: NetworkImage(authbackground_link),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -89,33 +90,30 @@ class _CorePageState extends State<CorePage> {
                       Container(
                         width: MediaQuery.of(context).size.width,
                         height: MediaQuery.of(context).size.height,
-                        decoration: const BoxDecoration(
+                        decoration: BoxDecoration(
                           color: Colors.black,
                           image: DecorationImage(
-                            image: AssetImage("_authBackground.png"),
-                            fit: BoxFit.cover,
+                            image: NetworkImage(authbackground_link),fit: BoxFit.cover,
                           ),
                         ),
                       ),
                       Container(
                         width: MediaQuery.of(context).size.width,
                         height: MediaQuery.of(context).size.height,
-                        decoration: const BoxDecoration(
+                        decoration: BoxDecoration(
                           color: Colors.black,
                           image: DecorationImage(
-                            image: AssetImage("_authBackground.png"),
-                            fit: BoxFit.cover,
+                            image: NetworkImage(authbackground_link), fit: BoxFit.cover,
                           ),
                         ),
                       ),
                       Container(
                         width: MediaQuery.of(context).size.width,
                         height: MediaQuery.of(context).size.height,
-                        decoration: const BoxDecoration(
+                        decoration: BoxDecoration(
                           color: Colors.black,
                           image: DecorationImage(
-                            image: AssetImage("_authBackground.png"),
-                            fit: BoxFit.cover,
+                            image: NetworkImage(authbackground_link),  fit: BoxFit.cover,
                           ),
                         ),
                       ),
@@ -143,8 +141,8 @@ class _CorePageState extends State<CorePage> {
         elevation: 0,
         items: [
           BottomNavigationBarItem(
-              icon: Image.asset(
-                "news.png",
+              icon: Image.network(
+                news_link,
                 width: 30,
                 height: 30,
                 color: _currentIndex == 0 ? Colors.white : Colors.black,

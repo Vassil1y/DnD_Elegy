@@ -1,4 +1,5 @@
 import 'package:dnd_elegy/auth_page/auth_page_main.dart';
+import 'package:dnd_elegy/static_strings.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: 'Flutter Demo',
       home: AuthPageMain(),
       // const MyHomePage(title: 'Flutter Demo Home Page'),
@@ -33,11 +34,11 @@ class _MyHomePageState extends State<MyHomePage> {
     return Container(
       // height: 100,
       // width: 100,
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         color: Colors.pink,
         image: DecorationImage(
           image: NetworkImage(
-              'https://catherineasquithgallery.com/uploads/posts/2021-03/1614633626_77-p-kiberpank-fon-dlya-fotoshopa-99.png'),
+              authbackground_link),
           fit: BoxFit.cover,
         ),
       ),
@@ -57,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
         // body: Container(
         //   decoration: BoxDecoration(
         //     image: DecorationImage(
-        //       image: AssetImage("assets/images/bulb.jpg"),
+        //       image: NetworkImage("assets/images/bulb.jpg"),
         //       fit: BoxFit.cover,
         //     ),
         //   ),
